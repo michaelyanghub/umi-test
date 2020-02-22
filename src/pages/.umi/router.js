@@ -14,11 +14,6 @@ const Router = routerRedux.ConnectedRouter;
 
 const routes = [
   {
-    path: '/login',
-    component: require('../login').default,
-    exact: true,
-  },
-  {
     path: '/goods',
     component: require('../goods').default,
     exact: true,
@@ -31,6 +26,11 @@ const routes = [
   {
     path: '/comp',
     component: require('../comp').default,
+    exact: true,
+  },
+  {
+    path: '/form1',
+    component: require('../form1').default,
     exact: true,
   },
   {

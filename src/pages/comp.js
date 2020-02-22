@@ -23,10 +23,17 @@ class SubGroup extends React.Component {
     });
   };
   //tree
-  onCheck = e => {
+  onCheck = (checkedKeys,e) => {
+    console.log(checkedKeys);
     console.log(e);
     console.log('onCheck');
-  }
+  };
+
+  // function  (
+  //   checkedKeys, 
+  //   e: { checked: bool, checkedNodes, node, event, halfCheckedKeys }
+  //   );
+
   onSelect = e => {
     console.log('onSelect');
   }

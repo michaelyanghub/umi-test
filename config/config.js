@@ -11,10 +11,6 @@ export default {
   ],
   routes: [
     {
-      path: '/login',
-      component: './login',
-    },
-    {
       path: '/goods',
       component: './goods',
     },
@@ -25,6 +21,10 @@ export default {
     {
       path: '/comp',
       component: './comp',
+    },
+    {
+      path: '/form1',
+      component: './form1',
     },
     {
       path: '/',
