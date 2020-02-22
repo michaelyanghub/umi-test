@@ -1,4 +1,5 @@
 export default {
+  // singular: true,//page使用单数
   plugins: [
     [
       'umi-plugin-react',
@@ -16,6 +17,10 @@ export default {
     {
       path: '/goods',
       component: './goods',
+    },
+    {
+      path: '/controlled',
+      component: './controlled',
     },
     {
       path: '/',

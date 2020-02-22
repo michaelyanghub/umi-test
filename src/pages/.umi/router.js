@@ -24,6 +24,11 @@ const routes = [
     exact: true,
   },
   {
+    path: '/controlled',
+    component: require('../controlled').default,
+    exact: true,
+  },
+  {
     path: '/',
     component: require('../index').default,
     exact: true,
