@@ -23,6 +23,10 @@ export default {
       component: './controlled',
     },
     {
+      path: '/comp',
+      component: './comp',
+    },
+    {
       path: '/',
       component: './index',
     },
