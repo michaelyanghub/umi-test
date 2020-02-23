@@ -1,8 +1,14 @@
 import React from 'React';
-import { Card, Layout, Tabs, Radio, Tree } from 'antd';
+import { Card, Layout, Tabs, Radio, Tree, Menu, Icon } from 'antd';
+
+
 
 // 组件测试
 class SubGroup extends React.Component {
+  state = {
+    value: 1,  //radio使用
+    current: 'mail', //menu使用
+  };
 
   onTextChange = (event) => {
     console.log(event.target.value);
@@ -10,12 +16,6 @@ class SubGroup extends React.Component {
   callback = (key) => {
     console.log(key);
   }
-
-  //radio
-  state = {
-    value: 1,
-  };
-
   onChange = e => {
     console.log('radio checked', e.target.value);
     this.setState({
@@ -23,24 +23,26 @@ class SubGroup extends React.Component {
     });
   };
   //tree
-  onCheck = (checkedKeys,e) => {
+  onCheck = (checkedKeys, e) => {
     console.log(checkedKeys);
     console.log(e);
     console.log('onCheck');
   };
-
-  // function  (
-  //   checkedKeys, 
-  //   e: { checked: bool, checkedNodes, node, event, halfCheckedKeys }
-  //   );
-
   onSelect = e => {
     console.log('onSelect');
   }
 
+  handleClick = e => {
+    console.log('click ', e);
+    this.setState({
+      current: e.key,
+    });
+  };
+
   render() {
     const { TabPane } = Tabs;
     const { TreeNode } = Tree;
+    const { SubMenu } = Menu;
     const style = {
       width: '400px',
       margin: '30px',
@@ -73,7 +75,7 @@ class SubGroup extends React.Component {
           </Tabs>
         </div> */}
 
-        <div>
+        {/* <div>
           <div>tree:</div>
           <Tree
             checkable
@@ -104,7 +106,7 @@ class SubGroup extends React.Component {
               </TreeNode>
             </TreeNode>
           </Tree>
-        </div>
+        </div> */}
         {/* <div>
           <div>Radio.Group:</div>
           <Radio.Group onChange={this.onChange} value={this.state.value}>
@@ -114,6 +116,39 @@ class SubGroup extends React.Component {
             <Radio value={4}>D</Radio>
           </Radio.Group>
         </div> */}
+        <div>
+          <div>menu:</div>
+          <div>mode: string: vertical horizontal inline</div>
+          <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal" /* style={{width:'20%'}} */ >
+            <Menu.Item key="mail">
+              <Icon type="mail" />Navigation One
+            </Menu.Item>
+            <Menu.Item key="app" disabled>
+              <Icon type="appstore" />Navigation Two
+            </Menu.Item>
+            <SubMenu
+              title={
+                <span className="submenu-title-wrapper">
+                  <Icon type="setting" />
+                  Navigation Three - Submenu
+                </span>
+              }
+            >
+              <Menu.ItemGroup title="Item 1">
+                <Menu.Item key="setting:1">Option 1</Menu.Item>
+                <Menu.Item key="setting:2">Option 2</Menu.Item>
+              </Menu.ItemGroup>
+              <Menu.ItemGroup title="Item 2">
+                <Menu.Item key="setting:3">Option 3</Menu.Item>
+                <Menu.Item key="setting:4">Option 4</Menu.Item>
+              </Menu.ItemGroup>
+            </SubMenu>
+            <Menu.Item key="alipay">
+              <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+                Navigation Four - Link</a>
+            </Menu.Item>
+          </Menu>
+        </div>
       </Layout>
     )
   };

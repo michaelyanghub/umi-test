@@ -1,6 +1,7 @@
 
 import { Form, Icon, Input, Button } from 'antd';
 
+//表单
 function hasErrors(fieldsError) {
   // console.log(5,Object.keys(fieldsError).some(field => fieldsError[field]));
   

@@ -27,6 +27,14 @@ export default {
       component: './form1',
     },
     {
+      path: '/layout',
+      component: './layout',
+    },
+    {
+      path: '/list',
+      component: './list',
+    },
+    {
       path: '/',
       component: './index',
     },

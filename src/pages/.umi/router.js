@@ -34,6 +34,16 @@ const routes = [
     exact: true,
   },
   {
+    path: '/layout',
+    component: require('../layout').default,
+    exact: true,
+  },
+  {
+    path: '/list',
+    component: require('../list').default,
+    exact: true,
+  },
+  {
     path: '/',
     component: require('../index').default,
     exact: true,
