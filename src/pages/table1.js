@@ -1,6 +1,7 @@
 import { Table, Divider, Tag } from 'antd';
 import styles from './table1.css';
 
+//基础的表格
 const columns = [
   {
     title: 'Name',

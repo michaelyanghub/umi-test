@@ -47,6 +47,18 @@ export default {
       component: './table_edit_cell',
     },
     {
+      path: '/table_select_sort',
+      component: './table_select_sort',
+    },
+    {
+      path: '/table_select',
+      component: './table_select',
+    },
+    {
+      path: '/table_filter_sort',
+      component: './table_filter_sort',
+    },
+    {
       path: '/',
       component: './index',
     },

@@ -59,6 +59,21 @@ const routes = [
     exact: true,
   },
   {
+    path: '/table_select_sort',
+    component: require('../table_select_sort').default,
+    exact: true,
+  },
+  {
+    path: '/table_select',
+    component: require('../table_select').default,
+    exact: true,
+  },
+  {
+    path: '/table_filter_sort',
+    component: require('../table_filter_sort').default,
+    exact: true,
+  },
+  {
     path: '/',
     component: require('../index').default,
     exact: true,
