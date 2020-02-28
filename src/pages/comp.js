@@ -120,10 +120,21 @@ class SubGroup extends React.Component {
         <div>
           <div>menu:</div>
           <div>mode: string: vertical horizontal inline</div>
-          <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal" defaultSelectedKeys={['mail-new']} openKeys={openedKeys}  /* style={{width:'20%'}} */ >
-            <Menu.Item key="mail">
-              <Icon type="mail" />Navigation One
-            </Menu.Item>
+          <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal" defaultSelectedKeys={['mail-new']}  openKeys={['mail']} /* style={{width:'20%'}} */ >
+
+            <SubMenu
+              key='mail'
+              title={
+                <span className="submenu-title-wrapper">
+                  <Icon type="mail" />Navigation One
+                </span>
+              }
+            >
+              <Menu.ItemGroup title="Item 1">
+                <Menu.Item key="mail:1">Option 1</Menu.Item>
+                <Menu.Item key="mail:2">Option 2</Menu.Item>
+              </Menu.ItemGroup>
+            </SubMenu>
             <Menu.Item key="mail-new">
               <Icon type="mail" />Navigation One - new
             </Menu.Item>
