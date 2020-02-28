@@ -74,6 +74,11 @@ const routes = [
     exact: true,
   },
   {
+    path: '/menu',
+    component: require('../menu').default,
+    exact: true,
+  },
+  {
     path: '/',
     component: require('../index').default,
     exact: true,

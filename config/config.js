@@ -59,6 +59,10 @@ export default {
       component: './table_filter_sort',
     },
     {
+      path: '/menu',
+      component: './menu',
+    },
+    {
       path: '/',
       component: './index',
     },
