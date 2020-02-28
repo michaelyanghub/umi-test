@@ -116,12 +116,16 @@ class SubGroup extends React.Component {
             <Radio value={4}>D</Radio>
           </Radio.Group>
         </div> */}
+        {/* 如果没有selectedKeys defaultSelectedKeys会生效 */}
         <div>
           <div>menu:</div>
           <div>mode: string: vertical horizontal inline</div>
-          <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal" /* style={{width:'20%'}} */ >
+          <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal" defaultSelectedKeys={['mail-new']} openKeys={openedKeys}  /* style={{width:'20%'}} */ >
             <Menu.Item key="mail">
               <Icon type="mail" />Navigation One
+            </Menu.Item>
+            <Menu.Item key="mail-new">
+              <Icon type="mail" />Navigation One - new
             </Menu.Item>
             <Menu.Item key="app" disabled>
               <Icon type="appstore" />Navigation Two

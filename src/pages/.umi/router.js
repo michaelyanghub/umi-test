@@ -44,6 +44,21 @@ const routes = [
     exact: true,
   },
   {
+    path: '/table1',
+    component: require('../table1').default,
+    exact: true,
+  },
+  {
+    path: '/tabie_checkbox',
+    component: require('../tabie_checkbox').default,
+    exact: true,
+  },
+  {
+    path: '/table_edit_cell',
+    component: require('../table_edit_cell').default,
+    exact: true,
+  },
+  {
     path: '/',
     component: require('../index').default,
     exact: true,

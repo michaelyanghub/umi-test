@@ -20,7 +20,10 @@ const pageData = [
   { name: "表单", page: "form1" },
   { name: "商品", page: "goods" },
   { name: "布局", page: "layout" },
-  { name: "列表", page: "list" }
+  { name: "列表", page: "list" },
+  { name: "普通表格", page: "table1" },
+  { name: "复选框表格", page: "tabie_checkbox" },
+  { name: "单元格编辑表格", page: "table_edit_cell" },
 ];
 
 

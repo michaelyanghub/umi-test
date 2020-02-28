@@ -35,6 +35,18 @@ export default {
       component: './list',
     },
     {
+      path: '/table1',
+      component: './table1',
+    },
+    {
+      path: '/tabie_checkbox',
+      component: './tabie_checkbox',
+    },
+    {
+      path: '/table_edit_cell',
+      component: './table_edit_cell',
+    },
+    {
       path: '/',
       component: './index',
     },
