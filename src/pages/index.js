@@ -22,7 +22,7 @@ const pageData = [
   { name: "布局", page: "layout" },
   { name: "列表", page: "list" },
   { name: "普通表格", page: "table1" },
-  // { name: "带选择的表格", page: "table_select" },
+  { name: "可选表格rowSelection", page: "table_select" },
   { name: "复选框表格", page: "tabie_checkbox" },
   { name: "可控排序表格", page: "table_filter_sort" },
   { name: "单元格编辑表格", page: "table_edit_cell" },

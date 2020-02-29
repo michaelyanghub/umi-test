@@ -35,6 +35,7 @@ class App extends React.Component {
     sortedInfo: null,
   };
 
+  //排序 或者 筛选时候会触发onChange事件，
   handleChange = (pagination, filters, sorter) => {
     console.log('Various parameters', pagination, filters, sorter);
     this.setState({
@@ -55,7 +56,8 @@ class App extends React.Component {
   };
 
   setAgeSort = () => {
-    this.setState({
+    console.log(58,'setAgeSort');
+     this.setState({
       sortedInfo: {
         order: 'descend',
         columnKey: 'age',
@@ -67,19 +69,18 @@ class App extends React.Component {
     let { sortedInfo, filteredInfo } = this.state;
     sortedInfo = sortedInfo || {};
     filteredInfo = filteredInfo || {};
-    console.log(7,filteredInfo);
-    
+    console.log(72,filteredInfo);
     const columns = [
       {
         title: 'Name',
         dataIndex: 'name',
         key: 'name',
         filters: [{ text: 'Joe', value: 'Joe' }, { text: 'Jim', value: 'Jim' }],
-        filteredValue: filteredInfo.name || null,
+        filteredValue: filteredInfo.name || null, //数组，['Joe','Jim']
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.name.length - b.name.length,
         sortOrder: sortedInfo.columnKey === 'name' && sortedInfo.order,
-        ellipsis: true,
+        ellipsis: true, //超过宽度将自动省略 ...
       },
       {
         title: 'Age',
